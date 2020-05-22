@@ -2,7 +2,8 @@
 
 ## Exercise I
 
-a)
+a) O(^n)
+
 
 
 b)
@@ -12,4 +13,4 @@ c)
 
 ## Exercise II
 
-
+# dont make this OVER COMPLICATED, YOU'RE JUST SEARCHING FOR A FOR LOOP?

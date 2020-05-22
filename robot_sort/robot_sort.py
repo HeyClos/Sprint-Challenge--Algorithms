@@ -1,3 +1,8 @@
+# SELECTION SORT AND BUBBLE SORT
+# IMPLEMENT ONE OF THESE WITH ALL THESE METHODS HERE
+
+# get some cards, move them around
+# 
 class SortingRobot:
     def __init__(self, l):
         """
@@ -29,6 +34,7 @@ class SortingRobot:
         returns True. Otherwise, it stays in place and returns False.
         This will increment the time counter by 1.
         """
+        #THESE ARE PROBABLY GOING TO BE USED AS POINTERS OF SOME SORT
         self._time += 1
         if self._position < len(self._list) - 1:
             self._position += 1
@@ -77,6 +83,7 @@ class SortingRobot:
             return 0
 
     def set_light_on(self):
+        # THESE ARE PROBABLY GOING TO BE USED AS FLAG OF SOME SORT
         """
         Turn on the robot's light
         """
@@ -97,7 +104,29 @@ class SortingRobot:
         Sort the robot's list.
         """
         # Fill this out
-        pass
+        # lit off means im looking for largest
+        # light on means im looking for smallest
+        # swaping means flipping the light
+        
+        self.set_light_on()
+        while self.light_is_on():
+            self.swap_item()
+            self.set_light_off()
+            while self.can_move_right():
+                self.move_right()    
+                if self.compare_item() == 1:
+                    self.swap_item()
+                    self.set_light_on()
+
+                self.move_left()
+                self.swap_item()
+                self.move_right()
+                self.swap_item()
+
+            self.swap_item()
+            while self.can_move_left():
+                    self.move_left()
+
 
 
 if __name__ == "__main__":
