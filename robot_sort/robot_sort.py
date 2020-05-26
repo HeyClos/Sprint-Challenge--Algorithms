@@ -104,7 +104,7 @@ class SortingRobot:
         Sort the robot's list.
         """
         # Fill this out
-        # lit off means im looking for largest
+        # light off means im looking for largest
         # light on means im looking for smallest
         # swaping means flipping the light
         
